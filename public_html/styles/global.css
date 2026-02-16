@@ -1,0 +1,597 @@
+@font-face {
+  font-family: "Saint Regus";
+  src:
+    url("../assets/fonts/SaintRegus/font.woff") format("woff"),
+    url("../assets/fonts/SaintRegus/font.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Scalter Serif";
+  src: url("../assets/fonts/ScalterSerif/Scalter-SerifCondensed.otf")
+    format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black: #000000;
+  --off-white: #f5f5f5;
+  --gray: #2c2c2c;
+  --red: #ff4910;
+  --blue: #148bff;
+  --yellow: #ffec00;
+  --neon-green: #39ff14;
+  --neon-pink: #ff69b4;
+  --neon-orange: #ffa500;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+  width: 22px;
+  background-color: var(--off-white);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 20px;
+  box-sizing: content-box;
+  background-color: var(--off-white);
+  border: 2px solid var(--black);
+  border-right: none;
+}
+
+::-webkit-scrollbar-track {
+  background:
+    linear-gradient(
+      45deg,
+      var(--black) 25%,
+      transparent 0,
+      transparent 75%,
+      var(--black) 0,
+      var(--black)
+    ),
+    linear-gradient(
+      45deg,
+      var(--black) 25%,
+      transparent 0,
+      transparent 75%,
+      var(--black) 0,
+      var(--black)
+    );
+  background-color: var(--off-white);
+  background-size: 4px 4px;
+  background-position:
+    0 0,
+    2px 2px;
+  width: 10px;
+  border-left: 3px solid var(--black);
+}
+
+body {
+  font-family: "Saint Regus", sans-serif;
+  background-color: var(--red);
+  animation: bg-move 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+h1 {
+  font-family: "Scalter Serif", sans-serif;
+  font-size: 5rem;
+  color: var(--red);
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 5px 5px var(--black);
+}
+
+h2 {
+  font-family: "Saint Regus", sans-serif;
+  font-weight: 100; /* Thin */
+  font-size: 3rem;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Saint Regus", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Saint Regus", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--off-white);
+  background-color: var(--black);
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.2rem;
+  width: fit-content;
+}
+
+button {
+  font-family: "Saint Regus", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: var(--black);
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+section {
+  border-radius: 25px;
+  border: 5px solid var(--black);
+  box-shadow: 5px 5px var(--black);
+  background-color: var(--off-white);
+  margin: 2% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 0 2%;
+}
+
+.neo {
+  border: 4px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.neo:hover {
+  box-shadow: 4px 4px 0 var(--black);
+  transform: translate(2px, 2px);
+}
+
+textarea,
+input {
+  border: 4px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  background-color: var(--off-white);
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  font-family: "Saint Regus", sans-serif;
+}
+
+textarea:hover,
+input:hover {
+  box-shadow: 4px 4px 0 var(--black);
+  transform: translate(2px, 2px);
+}
+
+textarea:focus-visible,
+input:focus-visible {
+  outline: unset;
+}
+
+@keyframes bg-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+/* Tablet screens (≥768px) */
+@media screen and (min-width: 768px) {
+  header {
+    margin: 0 6%; /* Match section left/right, no top/bottom */
+  }
+
+  footer {
+    margin: 0 6%; /* Match header */
+  }
+
+  section,
+  .ueber-mich,
+  .projekte {
+    margin: 2% 6%; /* Fixed top/bottom at 2%, increased left/right */
+  }
+
+  .projekte-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(350px, 1fr)
+    ); /* Slightly wider min-width */
+    gap: 2rem;
+  }
+
+  .projekt svg {
+    width: fit-content;
+    height: 64px;
+  }
+
+  h1 {
+    font-size: calc(7rem + 0.5vw); /* ~7.4rem at 768px */
+    font-family: "Scalter Serif", sans-serif;
+  }
+
+  h2 {
+    font-size: calc(3.5rem + 0.3vw); /* ~3.7rem */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h3 {
+    font-size: 1.5rem; /* Slightly larger than p */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  a {
+    font-size: 1.4rem;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .desktop-window {
+    max-width: 900px;
+    height: 90svh;
+  }
+
+  .window-header {
+    padding: 15px 40px;
+  }
+
+  .window-header span {
+    font-size: calc(1.125rem + 0.2vw); /* ~18px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-content {
+    padding: 30px;
+  }
+
+  .app-icon img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .app-icon span {
+    font-size: calc(0.875rem + 0.1vw); /* ~14px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .app {
+    width: calc(80% - 60px);
+    height: 80%;
+    margin: 30px;
+  }
+
+  .window-button {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Desktop and laptop screens (≥1024px) */
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 0 8%;
+  }
+
+  footer {
+    margin: 0 8%;
+  }
+
+  section,
+  .ueber-mich,
+  .projekte {
+    margin: 2% 8%;
+  }
+
+  .projekte-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(400px, 1fr)
+    ); /* Wider min-width for desktop */
+    gap: 2rem;
+  }
+
+  .projekt svg {
+    width: fit-content;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: calc(8rem + 1vw); /* ~8.8rem */
+    font-family: "Scalter Serif", sans-serif;
+    text-shadow: 8px 8px var(--black);
+    line-height: 0.8;
+  }
+
+  h2 {
+    font-size: calc(4rem + 0.5vw); /* ~4.5rem */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h3 {
+    font-size: 1.7rem; /* Slightly larger than p */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  a {
+    font-size: 1.4rem;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .desktop-window {
+    max-width: none;
+    aspect-ratio: 1/1; /* Square aspect ratio */
+  }
+
+  .window-header {
+    padding: 20px 50px;
+  }
+
+  .power {
+    padding: 6px 8px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .power img {
+    width: 18px;
+  }
+
+  .window-header span {
+    font-size: calc(1.25rem + 0.3vw); /* ~20px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-content {
+    padding: 40px;
+  }
+
+  .app-icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .app-icon span {
+    font-size: calc(1rem + 0.2vw); /* ~16px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .app {
+    width: calc(80% - 80px);
+    height: 70%;
+    margin: 40px;
+  }
+
+  .window-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* 2K screens (≥1440px) */
+@media screen and (min-width: 1440px) {
+  header {
+    margin: 0 10%;
+  }
+
+  footer {
+    margin: 0 10%;
+  }
+
+  section,
+  .ueber-mich,
+  .projekte {
+    margin: 2% 10%;
+  }
+
+  .projekte-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(450px, 1fr)
+    ); /* Wider min-width for 2K */
+    gap: 2.5rem; /* Slightly larger gap */
+  }
+
+  .projekt svg {
+    width: fit-content;
+    height: 96px;
+  }
+
+  h1 {
+    font-size: calc(9rem + 1.5vw); /* ~10rem */
+    font-family: "Scalter Serif", sans-serif;
+    text-shadow: 10px 10px var(--black);
+  }
+
+  h2 {
+    font-size: calc(4.5rem + 0.7vw); /* ~5.2rem */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h3 {
+    font-size: 1.9rem; /* Slightly larger than p */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    line-height: 1.9;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 1.9;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  a {
+    font-size: 1.8rem;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-header {
+    padding: 25px 60px;
+  }
+
+  .window-header span {
+    font-size: calc(1.5rem + 0.4vw); /* ~24px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-content {
+    padding: 50px;
+  }
+
+  .app-icon img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .app-icon span {
+    font-size: calc(1.125rem + 0.3vw); /* ~18px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .app {
+    width: calc(80% - 100px);
+    margin: 50px;
+  }
+
+  .window-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* 4K screens (≥2560px) */
+@media screen and (min-width: 2560px) {
+  header {
+    margin: 0 12%;
+  }
+
+  footer {
+    margin: 0 12%;
+  }
+
+  section,
+  .ueber-mich,
+  .projekte {
+    margin: 2% 12%;
+  }
+
+  .projekte-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(500px, 1fr)
+    ); /* Wider min-width for 4K */
+    gap: 3rem; /* Larger gap for spacious layout */
+  }
+
+  .projekt svg {
+    width: fit-content;
+    height: 112px;
+  }
+
+  h1 {
+    font-size: calc(10rem + 2vw); /* ~12rem */
+    font-family: "Scalter Serif", sans-serif;
+    text-shadow: 12px 12px var(--black);
+  }
+
+  h2 {
+    font-size: calc(5rem + 1vw); /* ~6rem */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  h3 {
+    font-size: 2.1rem; /* Slightly larger than p */
+    font-family: "Saint Regus", sans-serif;
+  }
+  
+  h4 {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 2;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  a {
+    font-size: 2rem;
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-header {
+    padding: 30px 70px;
+  }
+
+  .window-header span {
+    font-size: calc(1.75rem + 0.5vw); /* ~28px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .window-content {
+    padding: 60px;
+  }
+
+  .app-icon img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .app-icon span {
+    font-size: calc(1.25rem + 0.4vw); /* ~20px */
+    font-family: "Saint Regus", sans-serif;
+  }
+
+  .app {
+    width: calc(80% - 120px);
+    margin: 60px;
+  }
+
+  .window-button {
+    width: 36px;
+    height: 36px;
+  }
+}

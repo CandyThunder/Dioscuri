@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /components/impressum.php
+Disallow: /components/datenschutz.php
