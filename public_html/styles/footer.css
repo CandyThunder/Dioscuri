@@ -88,8 +88,7 @@
 }
 
 .get-in-touch {
-  max-width: 400px;
-  width: 100%;
+  width: min(100%, 400px);
   padding: 4%;
 }
 

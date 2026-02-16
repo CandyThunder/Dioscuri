@@ -308,7 +308,7 @@ input {
     font-family: "Saint Regus", sans-serif;
   }
   .desktop-window {
-    max-width: 900px;
+    width: min(100%, 900px);
     height: 90svh;
   }
   .window-header {
@@ -367,8 +367,8 @@ input {
     font-family: "Saint Regus", sans-serif;
   }
   .desktop-window {
-    max-width: none;
-    aspect-ratio: 1/1;
+    width: min(100%, 1200px);
+    height: 90svh;
   }
   .window-header {
     padding: 20px 50px;
