@@ -253,7 +253,7 @@ input:focus-visible {
   }
 
   .desktop-window {
-    max-width: 900px;
+    width: min(100%, 900px);
     height: 90svh;
   }
 
@@ -355,8 +355,8 @@ input:focus-visible {
   }
 
   .desktop-window {
-    max-width: none;
-    aspect-ratio: 1/1; /* Square aspect ratio */
+    width: min(100%, 1200px);
+    height: 90svh;
   }
 
   .window-header {

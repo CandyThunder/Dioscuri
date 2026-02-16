@@ -15,8 +15,7 @@
 }
 
 .desktop-window {
-  width: 100%;
-  max-width: 800px;
+  width: min(100%, 800px);
   height: 80svh;
   border: 5px solid var(--black);
   border-radius: 5px;
